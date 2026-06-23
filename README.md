@@ -46,7 +46,7 @@ PHASE 3 → Update priorities → Stepdown Primary → Encrypt Primary
 ### 1. Verify RS is Fully Healthy
 
 ```bash
-mongosh "mongodb://prod_Iuyf76:7sPvUitD8ro%40zVDCiRp4@mongo.primary.prod.internal:27017/reelo_prod_dkkBy?replicaSet=rs0&authSource=reelo_prod_dkkBy" \
+mongosh "mongodb://<USERNAME>:<PASSWORD>@mongo.primary.prod.internal:27017/reelo_prod_dkkBy?replicaSet=rs0 \
   --eval "rs.status()" | grep -E 'name|stateStr|health'
 ```
 
